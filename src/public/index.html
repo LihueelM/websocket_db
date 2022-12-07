@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <title>CRUD WEBSOCKET + SQL</title>
+</head>
+<body>  
+    
+    <form action="/" method="post" id="formProductos">
+      <div>
+          <label for="producto">Producto</label>
+          <input id="producto" type="text" name="producto">
+      </div>
+      <div>
+          <label for="precio">Precio</label>
+          <input id="precio" type="number" name="precio">
+      </div>
+      <div>
+          <label for="imagen">URL de imagen</label>
+          <input id="imagen" type="text" name="imagen">
+      </div>
+
+      <button id="botonProducto" >Agregar</button>
+      <!-- Div donde se insertaran los productos agregados -->
+      <div id="listaProductos" ></div>
+    </form>
+
+
+    
+    <form action="/" method="post" id="formMensajes">
+      <div>
+          <label for="autor">Autor</label>
+          <input id="autor" type="text" name="autor">
+      </div>
+      <div>
+          <label for="mensaje">Mensaje</label>
+          <input id="texto" type="text" name="mensaje">
+      </div>
+
+      <button id="botonMensaje">Enviar</button>
+      <!-- Div donde se insertaran los mensajes  -->
+      <div id="cajaMensajes"></div>
+    </form>
+
+    <script src="/socket.io/socket.io.min.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./sockets.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
